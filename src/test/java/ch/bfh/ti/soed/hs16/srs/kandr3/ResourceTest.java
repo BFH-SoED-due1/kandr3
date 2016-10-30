@@ -6,6 +6,7 @@ public class ResourceTest {
 
 	@Test
 	public void test() {
+		// TODO Do not commit test class having test(s) that fail...
 		// fail("Not yet implemented");
 	}
 
