@@ -3,7 +3,7 @@
 		-------------
 		Eric Dubuis
 		-------------
-		October 3, 2016
+		October 3, 2016; Evaluation: October 30, 2016
 
 
 Introduction
@@ -79,7 +79,7 @@ branch. You will merge the deliverable from you development branch <sprint1>
 	[]
 
 	Note that all documents and the source files must be committed on the "master"
-branch of the remote GitHub repository. Remeber: You’ll work on individual branches
+branch of the remote GitHub repository. Remember: You’ll work on individual branches
 or on the development branch, however, and you have to merge your committed items
 onto the "master" branch.
 
@@ -91,24 +91,32 @@ Evaluation
 *-------------------------------------------+---------------*-----------------*
 | Item										| Max. points	| Points received |
 *-------------------------------------------+---------------*-----------------*
-| Document containing the user stories\		| 		10		| 				  |
+| Document containing the user stories\		| 		10		| 		 9		  |
 | and roles.								| 				| 				  |
-|											| 				| 				  |
+| COMMENTS:\								| 				| 				  |
+| - User stories: good\ 					| 				| 				  |
+| - List of roles: missing (-1)\ 			| 				| 				  |
+| - Use cases: Those marked yellow are not use cases | 		| 				  |
 *-------------------------------------------+---------------*-----------------*
-| Domain Model Document\					| 		10		| 				  |
-| (associations, multiplicities)							| 				  |
-|											| 				| 				  |
-| 											| 				| 				  |
+| Domain Model Document\					| 		10		| 		10		  |
+| (associations, multiplicities)			|				| 				  |
+| COMMENTS:\								| 				| 				  |
+| - Do not use navigability arrows in domain models\ | 		| 				  |
+| - Bad name: "User"\						| 				| 				  |
+| - Hint: introduce names for associations	| 				| 				  |
 *-------------------------------------------+---------------*-----------------*
-| Sensible stakeholders (in glossary)\		| 		10		| 				  |
-| 											| 				| 			  	  |
-| 											| 				| 				  |
+| Sensible stakeholders (in glossary)\		| 		10		| 		 9		  |
+| COMMENTS:\								| 				| 				  |
+| - Missing: Developer, User, ...			| 				| 				  |
 *-------------------------------------------+---------------*-----------------*
-| Working infrastructure\					| 		10		| 				  |
-| 											| 				| 			  	  |
-| 											| 				| 				  |
+| First classes and tests\					| 		10		| 		 9		  |
+| COMMENTS:\								| 				| 				  |
+| - Test class with test that fails; else okay (-1) | 		| 				  |
 *-------------------------------------------+---------------*-----------------*
-| Total										| 		50		| 				  |
+| Working infrastructure\					| 		10		| 		10		  |
+| - Okay									| 				| 			  	  |
+*-------------------------------------------+---------------*-----------------*
+| Total										| 		50		| 		47		  |
 *-------------------------------------------+---------------*-----------------*
 Distribution of points for this deliverable.
 
