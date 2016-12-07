@@ -18,6 +18,7 @@ import ch.bfh.ti.soed.hs16.srs.kandr3.Model.ResourceNotFoundException;
 import ch.bfh.ti.soed.hs16.srs.kandr3.Model.TimeRange;
 import ch.bfh.ti.soed.hs16.srs.kandr3.Model.User;
 import ch.bfh.ti.soed.hs16.srs.kandr3.Model.UserNotFoundException;
+import ch.bfh.ti.soed.hs16.srs.kandr3.Service.CreateResource;
 
 public class Controller {
 
@@ -51,6 +52,7 @@ public class Controller {
 
 	public void addResource(Resource resource){
 		this.resource.add(resource);
+		CreateResource.create(resource.getEid(), resource.getDescription(), resource.getPlace(), resource.getSize());
 	}
 
 

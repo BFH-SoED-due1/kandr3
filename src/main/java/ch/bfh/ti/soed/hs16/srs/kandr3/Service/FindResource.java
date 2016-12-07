@@ -18,4 +18,12 @@ public class FindResource {
       System.out.println("employee RESERVATIONS = " + resource.getReservations());
       System.out.println("employee SIZE = " + resource.getSize());
    }
+   
+   public static Resource find(int eid){
+	   EntityManagerFactory emfactory = Persistence.createEntityManagerFactory( "Eclipselink_JPA" );
+	      EntityManager entitymanager = emfactory.createEntityManager();
+	      Resource resource = entitymanager.find( Resource.class, eid );
+	      
+	      return resource;
+   }
 }

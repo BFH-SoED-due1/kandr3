@@ -27,4 +27,24 @@ public class CreateResource {
       entitymanager.close( );
       emfactory.close( );
    }
+   
+   public static void create(int id, String description, String place, int size){
+	   EntityManagerFactory emfactory = Persistence.createEntityManagerFactory( "Eclipselink_JPA" );
+	      
+	      EntityManager entitymanager = emfactory.createEntityManager( );
+	      entitymanager.getTransaction( ).begin( );
+
+	      Resource resource = new Resource(); 
+	      resource.setEid( id);
+	      resource.setDescription(description);
+	      resource.setPlace(place);
+	      resource.setSize(size);
+	      resource.setReservations(null);
+	      
+	      entitymanager.persist( resource );
+	      entitymanager.getTransaction( ).commit( );
+
+	      entitymanager.close( );
+	      emfactory.close( );
+   }
 }
