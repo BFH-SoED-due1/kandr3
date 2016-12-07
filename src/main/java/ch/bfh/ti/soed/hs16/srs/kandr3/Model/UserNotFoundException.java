@@ -9,4 +9,9 @@ package ch.bfh.ti.soed.hs16.srs.kandr3.Model;
 
 public class UserNotFoundException extends Exception {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5556844225561521363L;
+
 }

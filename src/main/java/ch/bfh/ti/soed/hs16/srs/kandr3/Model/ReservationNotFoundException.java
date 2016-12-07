@@ -9,4 +9,9 @@ package ch.bfh.ti.soed.hs16.srs.kandr3.Model;
 
 public class ReservationNotFoundException extends Exception {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5370988670865795518L;
+
 }

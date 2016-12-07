@@ -9,4 +9,9 @@ package ch.bfh.ti.soed.hs16.srs.kandr3.Model;
 
 public class ResourceNotFoundException extends Exception {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 }
