@@ -3,7 +3,7 @@
 		-------------
 		Eric Dubuis
 		-------------
-		November 18, 2016
+		November 18, 2016; updated December 11, 2016
 
 
 Deliverable 3
@@ -112,6 +112,50 @@ example, in the Iteration Plan document, however.)
 	50 points at most per team member are attributed to this deliverable. Points may
 not be equally distributed among team members. (However, this is the goal.)
 
+*-------------------------------------------+---------------*-----------------*
+| Item										| Max. points	| Points received |
+*-------------------------------------------+---------------*-----------------*
+| Product backlog items at the beginning\	| 		 6		| 		 6		  |
+| COMMENTS:\								| 				| 				  |
+| - Okay									| 				| 				  |
+*-------------------------------------------+---------------*-----------------*
+| Sprint backlog items / tasks and their states\ | 	6		| 		 4		  |
+| COMMENTS:\								| 				| 				  |
+| - Combined with product backlog\			| 				| 				  |
+| - Estimates missing (-2)					| 				| 				  |
+*-------------------------------------------+---------------*-----------------*
+| Package structure meets SOLID principles, JDepend\ | 8	| 		 8		  |
+| COMMENTS:\								| 				| 				  |
+| - Okay									| 				| 				  |
+*-------------------------------------------+---------------*-----------------*
+| Production classes and interfaces\		| 		 8		| 		 6		  |
+| COMMENTS:\								| 				| 				  |
+| - Package names: use small letters\ 		| 				| 				  |
+| - UI: No progress (-2)\ 					| 				| 				  |
+| - Rest: Okay 								| 				| 				  |
+*-------------------------------------------+---------------*-----------------*
+| Working infrastructure with persistence\	| 		 8		| 		 8		  |
+| COMMENTS:\								| 				| 			  	  |
+| - When using MySQL: Add driver as Maven dependency\ | 	| 				  |
+| - Using H2 in-memory database is recommended | 			| 				  |
+*-------------------------------------------+---------------*-----------------*
+| JUnit tests, code coverage\				| 		 8		| 		 2		  |
+| COMMENTS:\								| 				| 			  	  |
+| - Unit test CreateResourceTest.testCreate() fails (-2)\ | | 				  |
+| - Bad coverage (-4)						| 				| 				  |
+*-------------------------------------------+---------------*-----------------*
+| Checkstyle report\						| 		 6		| 		 2		  |
+| COMMENTS:\								| 				| 			  	  |
+| - Many Checkstyle errors 					| 				| 				  |
+|   (set up IDE to automatically fix them) 	| 				| 				  |
+*-------------------------------------------+---------------*-----------------*
+| Miscellaneous\							| 				| 		 -2		  |
+| COMMENTS:\								| 				| 			  	  |
+| - Errors in JavaDoc comment (-2)			| 				| 				  |
+*-------------------------------------------+---------------*-----------------*
+| Total										| 		50		| 		34		  |
+*-------------------------------------------+---------------*-----------------*
+Distribution of points for this deliverable.
 
 
 * Deadline
