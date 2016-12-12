@@ -12,14 +12,20 @@ public class FindResourceTest {
 	@Test
 	public void testFind() {
 
-		Controller controller = new Controller();
-		Resource resource = new Resource("N101", 35, "Quellgasse 21");
-		resource.setEid(1111);
+		Resource resource = FindResource.find(1111);
 		
+		Resource resource2 = new Resource("N101", 35, "Quellgasse 21");
+		resource2.setEid(1111);
 		
-		//Resource resource2 = FindResource.find(1111);
 		//assertFalse(resource.getEid() == resource2.getEid());
-			//assertTrue(resource2== null);
+		
+		
+		Controller controller = new Controller();
+		controller.addResource(resource2);
+		
+		Resource resource3 = FindResource.find(1111);
+		assertTrue(resource2.getEid() == resource3.getEid());
+
 	}
 
 }
