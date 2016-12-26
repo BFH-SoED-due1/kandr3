@@ -4,13 +4,16 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import ch.bfh.ti.soed.hs16.srs.kandr3.Controller.Controller;
-import ch.bfh.ti.soed.hs16.srs.kandr3.Model.Resource;
+import ch.bfh.ti.soed.hs16.srs.kandr3.controller.Controller;
+import ch.bfh.ti.soed.hs16.srs.kandr3.model.Administrator;
+import ch.bfh.ti.soed.hs16.srs.kandr3.model.AdministratorNotFoundException;
+import ch.bfh.ti.soed.hs16.srs.kandr3.model.Resource;
+import ch.bfh.ti.soed.hs16.srs.kandr3.service.FindResource;
 
 public class FindResourceTest {
 
 	@Test
-	public void testFind() {
+	public void testFind() throws AdministratorNotFoundException {
 
 		Resource resource = FindResource.find(1111);
 		
@@ -21,7 +24,7 @@ public class FindResourceTest {
 		
 		
 		Controller controller = new Controller();
-		controller.addResource(resource2);
+		controller.addResource(new Administrator("name"),resource2);
 		
 		Resource resource3 = FindResource.find(1111);
 		assertTrue(resource2.getEid() == resource3.getEid());

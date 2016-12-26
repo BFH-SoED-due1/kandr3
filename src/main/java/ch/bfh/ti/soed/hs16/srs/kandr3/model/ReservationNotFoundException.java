@@ -5,13 +5,13 @@
  *
  * Distributable under GPL license. See terms of license at gnu.org.
  */
-package ch.bfh.ti.soed.hs16.srs.kandr3.Model;
+package ch.bfh.ti.soed.hs16.srs.kandr3.model;
 
-public class ResourceNotFoundException extends Exception {
+public class ReservationNotFoundException extends Exception {
 
 	/**
-	 * 
+	 *
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -5370988670865795518L;
 
 }

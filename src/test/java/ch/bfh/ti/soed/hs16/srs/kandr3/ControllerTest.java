@@ -16,25 +16,29 @@ import java.util.Set;
 
 import org.junit.Test;
 
-import ch.bfh.ti.soed.hs16.srs.kandr3.Controller.Controller;
-import ch.bfh.ti.soed.hs16.srs.kandr3.Model.Reservation;
-import ch.bfh.ti.soed.hs16.srs.kandr3.Model.ReservationNotFoundException;
-import ch.bfh.ti.soed.hs16.srs.kandr3.Model.Resource;
-import ch.bfh.ti.soed.hs16.srs.kandr3.Model.ResourceNotFoundException;
-import ch.bfh.ti.soed.hs16.srs.kandr3.Model.TimeRange;
-import ch.bfh.ti.soed.hs16.srs.kandr3.Model.User;
-import ch.bfh.ti.soed.hs16.srs.kandr3.Model.UserNotFoundException;
+import ch.bfh.ti.soed.hs16.srs.kandr3.controller.Controller;
+import ch.bfh.ti.soed.hs16.srs.kandr3.model.Administrator;
+import ch.bfh.ti.soed.hs16.srs.kandr3.model.AdministratorNotFoundException;
+import ch.bfh.ti.soed.hs16.srs.kandr3.model.Reservation;
+import ch.bfh.ti.soed.hs16.srs.kandr3.model.ReservationNotFoundException;
+import ch.bfh.ti.soed.hs16.srs.kandr3.model.Resource;
+import ch.bfh.ti.soed.hs16.srs.kandr3.model.ResourceNotFoundException;
+import ch.bfh.ti.soed.hs16.srs.kandr3.model.TimeRange;
+import ch.bfh.ti.soed.hs16.srs.kandr3.model.User;
+import ch.bfh.ti.soed.hs16.srs.kandr3.model.UserNotFoundException;
 
 public class ControllerTest {
 
 	@Test
-	public void testMakeReservation() throws ReservationNotFoundException, ResourceNotFoundException, UserNotFoundException{
+	public void testMakeReservation() throws ReservationNotFoundException, ResourceNotFoundException, UserNotFoundException, AdministratorNotFoundException{
 		Controller controller = new Controller();
 
 		User user = new User( "Peter M�ller");
 		controller.addUser(user);
 		Resource resource = new Resource("room 101", 20, "Rolex Geb�ude");
-		controller.addResource(resource);
+		Administrator administrator = new Administrator("administrator");
+		controller.addAdministrator(administrator);
+		controller.addResource(administrator, resource);
 
 		Calendar calendar1 = Calendar.getInstance();
 		Calendar calendar2 = Calendar.getInstance();
@@ -59,13 +63,16 @@ public class ControllerTest {
 	}
 
 	@Test
-	public void testCancelReservation() throws ReservationNotFoundException, ResourceNotFoundException, UserNotFoundException{
+	public void testCancelReservation() throws ReservationNotFoundException, ResourceNotFoundException, UserNotFoundException, AdministratorNotFoundException{
 		Controller controller = new Controller();
 
 		User user = new User( "Peter M�ller");
 		controller.addUser(user);
 		Resource resource = new Resource("room 101", 20, "Rolex Geb�ude");
-		controller.addResource(resource);
+		Administrator administrator = new Administrator("administrator");
+		controller.addAdministrator(administrator);
+
+		controller.addResource(administrator, resource);
 
 		Calendar calendar1 = Calendar.getInstance();
 		Calendar calendar2 = Calendar.getInstance();
@@ -98,14 +105,16 @@ public class ControllerTest {
 	}
 
 	@Test
-	public void testMakeRecurringReservation() throws ResourceNotFoundException, UserNotFoundException{
+	public void testMakeRecurringReservation() throws ResourceNotFoundException, UserNotFoundException, AdministratorNotFoundException{
 Controller controller = new Controller();
 
 		User user = new User( "Peter M�ller");
 		controller.addUser(user);
 		Resource resource = new Resource("room 101", 20, "Rolex Geb�ude");
-		controller.addResource(resource);
+		Administrator administrator = new Administrator("administrator");
+		controller.addAdministrator(administrator);
 
+		controller.addResource(administrator, resource);
 		TimeRange timeRange = new TimeRange();
 
 		// Der Benutzer reserviert den Raum und gibt as Zeitfenster an

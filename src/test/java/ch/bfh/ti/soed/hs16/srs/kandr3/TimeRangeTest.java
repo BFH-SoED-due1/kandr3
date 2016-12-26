@@ -13,7 +13,7 @@ import java.util.Calendar;
 
 import org.junit.Test;
 
-import ch.bfh.ti.soed.hs16.srs.kandr3.Model.TimeRange;
+import ch.bfh.ti.soed.hs16.srs.kandr3.model.TimeRange;
 
 public class TimeRangeTest {
 
