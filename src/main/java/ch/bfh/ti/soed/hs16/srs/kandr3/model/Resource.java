@@ -5,7 +5,7 @@
  *
  * Distributable under GPL license. See terms of license at gnu.org.
  */
-package ch.bfh.ti.soed.hs16.srs.kandr3.Model;
+package ch.bfh.ti.soed.hs16.srs.kandr3.model;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -24,16 +24,16 @@ import javax.persistence.Table;
 public class Resource {
 
 	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO) 
-	
+	@GeneratedValue(strategy = GenerationType.AUTO)
+
 	private int eid;
 	private String description;
 	private int size;
 	private String place;
 	private Set<Reservation> reservations;
-	
-	public Resource(){
-		
+
+	public Resource() {
+
 	}
 
 	public Resource(String string, int i, String string2) {
@@ -45,25 +45,23 @@ public class Resource {
 	}
 
 	@Override
-	public Resource clone(){
+	public Resource clone() {
 		Resource resource = new Resource(this.description, this.size, this.place);
 		return resource;
 	}
 
-	public Set<Reservation> getReservations(){
+	public Set<Reservation> getReservations() {
 		return reservations;
 	}
 
-	public void addReservation(Reservation reservation){
+	public void addReservation(Reservation reservation) {
 		reservations.add(reservation);
 	}
 
 	public boolean cancelReservation(Reservation reservation) {
 		return this.reservations.remove(reservation);
 	}
-	
-	
-	
+
 	public int getEid() {
 		return eid;
 	}
