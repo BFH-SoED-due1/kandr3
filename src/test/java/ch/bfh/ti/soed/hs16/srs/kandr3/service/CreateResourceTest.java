@@ -1,4 +1,4 @@
-package ch.bfh.ti.soed.hs16.srs.kandr3.Service;
+package ch.bfh.ti.soed.hs16.srs.kandr3.service;
 
 import static org.junit.Assert.*;
 
