@@ -24,6 +24,7 @@ import ch.bfh.ti.soed.hs16.srs.kandr3.service.CreateResource;
 
 public class Controller {
 
+	// TODO Hier verwenden Sie Listen mit POJO's...
 	private List<User> user;
 	private List<Resource> resource;
 	private List<Reservation> reservation;
@@ -58,7 +59,9 @@ public class Controller {
 	public void addResource(Administrator administrator, Resource resource) throws AdministratorNotFoundException {
 		if (this.administrator.equals(administrator) == false)
 			throw new AdministratorNotFoundException();
+		// TODO Hier verwenden Sie immer noch die Liste mit POJO's.
 		this.resource.add(resource);
+		// TODO Und hier verwenden Sie JPA!! Das kann ja nicht gut gehen.
 		CreateResource.create(resource.getEid(), resource.getDescription(), resource.getPlace(), resource.getSize());
 	}
 
@@ -70,15 +73,21 @@ public class Controller {
 
 	/**
 	 *
-	 * @param user does a recurring reservation
-	 * @param resource is reserved in a recurring reservation
-	 * @param timeRange resource is reserved recurringly in the same time range
+	 * @param user
+	 *            does a recurring reservation
+	 * @param resource
+	 *            is reserved in a recurring reservation
+	 * @param timeRange
+	 *            resource is reserved recurringly in the same time range
 	 * @param repetition
 	 *            specifies in how many succeeding weeks the reservation will
 	 *            recur
 	 * @return no return value
-	 * @throws ResourceNotFoundException is thrown if controller does not contain the specified resource
-	 * @throws UserNotFoundException is thrown if controller does not contain the specified user
+	 * @throws ResourceNotFoundException
+	 *             is thrown if controller does not contain the specified
+	 *             resource
+	 * @throws UserNotFoundException
+	 *             is thrown if controller does not contain the specified user
 	 */
 	public List<Reservation> makeRecurringReservation(User user, Resource resource, TimeRange timeRange, int repetition)
 			throws ResourceNotFoundException, UserNotFoundException { // weekly
@@ -99,8 +108,11 @@ public class Controller {
 
 	/**
 	 *
-	 * @param reservation will be removed from the controller
-	 * @throws ReservationNotFoundException is thrown if the controller does not contain the specified reservation
+	 * @param reservation
+	 *            will be removed from the controller
+	 * @throws ReservationNotFoundException
+	 *             is thrown if the controller does not contain the specified
+	 *             reservation
 	 */
 	public void cancelReservation(Reservation reservation) throws ReservationNotFoundException {
 		if ((reservation.getUser().cancelReservation(reservation) && this.reservation.remove(reservation)
