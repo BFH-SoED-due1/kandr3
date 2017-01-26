@@ -10,6 +10,7 @@ package ch.bfh.ti.soed.hs16.srs.kandr3.model;
 import ch.bfh.ti.soed.hs16.srs.kandr3.controller.Controller;
 
 public class Administrator {
+	// TODO Field is not used...
 	private String name;
 
 	public Administrator(String name) {
